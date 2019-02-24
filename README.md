@@ -1,1 +1,1 @@
-# gifParty
+# Gif Player
