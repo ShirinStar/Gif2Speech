@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { VoicePlayer, VoiceRecognition } from 'react-voice-components';
 import './App.css';
 import { fetchGif, userSearch } from './services/giphy';
 
@@ -26,6 +27,10 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Gif Player</h1>
+        <VoicePlayer
+        play
+        text="Hey Drake Brian and Jason"
+        />
       </div>
     );
   }
