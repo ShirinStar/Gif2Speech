@@ -12,14 +12,16 @@ An audio-visual instrument using Giphy and text to speech APIs.
 ### Time frames
 Component | Priority | Estimated Time | Time Invetsted 
 --- | --- | --- | ---
-Adding Gif by {search wrod} | H | 2 |
+Adding Gif by {search word} | H | 2.5 |
 Random Gif to each search word | H | 1.5 |
 Adding form (submit+add+text) | H | 3 |
-Link form to Gif search | H | 1.5 |
+Link form to Gif search | H | 2 |
 Maybe moving to IBM API | M | 2 |
 Link form to text 2 speech | H | 2.5 |
-
-
+Full screen input text animation transperant | M | 1.5
+Delete Button | M | 1.5
+Debbuging collisions | H | 3
+Design | H | 15
 
 #### text to speech API research:
 - [react-voice-components](https://github.com/grvcoelho/react-voice-components/) - I started with this one
