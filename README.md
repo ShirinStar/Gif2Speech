@@ -13,5 +13,8 @@ An audio-visual instrument using Giphy and text to speech APIs.
 - [Google Cloude](https://cloud.google.com/text-to-speech/docs/reference/rest/)
 - [web API speech](https://w3c.github.io/speech-api/#implementation-considerations)
 
+### Giphy API documentation
+[link](https://developers.giphy.com/docs/)
+
 
 
