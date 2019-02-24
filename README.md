@@ -9,6 +9,18 @@ An audio-visual instrument using Giphy and text to speech APIs.
 ### Component Hierarchy
 ![Hierarchy sketch](https://i.imgur.com/wiiLKik.jpg)
 
+### Time frames
+Component | Priority | Estimated Time | Time Invetsted 
+--- | --- | --- | ---
+Adding Gif by {search wrod} | H | 2 |
+Random Gif to each search word | H | 1.5 |
+Adding form (submit+add+text) | H | 3 |
+Link form to Gif search | H | 1.5 |
+Maybe moving to IBM API | M | 2 |
+Link form to text 2 speech | H | 2.5 |
+
+
+
 #### text to speech API research:
 - [react-voice-components](https://github.com/grvcoelho/react-voice-components/) - I started with this one
 - [react-speech](https://github.com/andrewkeig/react-speech)
