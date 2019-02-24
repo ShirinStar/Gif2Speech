@@ -14,7 +14,7 @@ An audio-visual instrument using Giphy and text to speech APIs.
 - [web API speech](https://w3c.github.io/speech-api/#implementation-considerations)
 
 ### Giphy API documentation
-[link](https://developers.giphy.com/docs/)
+- [link](https://developers.giphy.com/docs/)
 
 
 
