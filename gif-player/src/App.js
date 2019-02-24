@@ -26,10 +26,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Gif Player</h1>
+          <div className='home'>
+            <h1>GIF to SPEECH</h1>
+          </div>
         <VoicePlayer
         play
-        text="Hey Drake Brian and Jason"
+        text="Hey Drake Brian and Jason.."
         />
       </div>
     );
