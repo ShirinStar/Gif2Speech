@@ -33,5 +33,8 @@ Design | H | 15
 ### Giphy API documentation
 - [link](https://developers.giphy.com/docs/)
 
+### post MPV
+maybe to add to lyrics API and play songs that way.. :)
+
 
 
