@@ -13,12 +13,12 @@ An audio-visual instrument using Giphy and text to speech APIs.
 Component | Priority | Estimated Time | Time Invetsted 
 --- | --- | --- | ---
 Adding Gif by {search word} | H | 2.5 |
-Random Gif to each search word | H | 1.5 |
-Adding form (submit+add+text) | H | 3 |
+Random Gif to each search word | H | 2.5 |
+Adding form (submit+add+text) | H | 3.5 |
 Link form to Gif search | H | 2 |
-Maybe moving to IBM API | M | 2 |
-Link form to text 2 speech | H | 2.5 |
-Full screen input text animation transperant | M | 1.5
+Maybe moving to IBM API | M | 2.5 |
+Link form to text 2 speech | H | 3 |
+Full screen input text animation transperant | M | 2
 Delete Button | M | 1.5
 Debbuging collisions | H | 3
 Design | H | 15
