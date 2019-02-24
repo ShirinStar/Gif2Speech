@@ -10,7 +10,7 @@ An audio-visual instrument using Giphy and text to speech APIs.
 ![Hierarchy sketch](https://i.imgur.com/wiiLKik.jpg)
 
 ### Major problems
-I hope that throughout this project I can gain a better understanding on the ins and out of react, mainly looked to explore- Form(user input- add/delete), router, props, conditional functions and front-end skills. 
+I hope that throughout this project to gain a better understanding on the ins and out of react, mainly looked to explore- Form (user input- add/delete options), router, props, conditional functions, connections between two APIs and front-end skills. 
 
 ### Time frames
 Component | Priority | Estimated Time | Time Invetsted 
