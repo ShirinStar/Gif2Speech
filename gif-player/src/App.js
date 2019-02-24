@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { fetchGif } from './services/giphy';
+import { fetchGif, userSearch } from './services/giphy';
 
 class App extends Component {
   constructor(){

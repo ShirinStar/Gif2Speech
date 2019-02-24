@@ -6,12 +6,24 @@ const fetchGif = async () => {
   try {
     const resp = await axios(`${BASE_URL}/search?q=ryan+gosling&api_key=${apiKey}`)
     return resp.data;
-  } catch(e) {
-    console.log('not working', e);
+  } catch(error) {
+    console.log('not working', error);
     return [];
   }
 }
 
+const userSearch = async (search) => {
+  try {
+    const resp = await axios(`${BASE_URL}/search?q=${search}&api_key=${apiKey}`)
+    return resp.data;
+  } catch(error) {
+    console.log('not working', error);
+    return [];
+  }
+}
+
+
 export {
-  fetchGif
+  fetchGif,
+  userSearch
 }
