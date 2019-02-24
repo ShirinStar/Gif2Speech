@@ -26,7 +26,7 @@ Delete Button | M | 1.5
 Debbuging collisions | H | 3
 Design | H | 15
 
-#### text to speech API research:
+### text to speech API research:
 - [react-voice-components](https://github.com/grvcoelho/react-voice-components/) - I started with this one
 - [react-speech](https://github.com/andrewkeig/react-speech)
 - [IBM API](https://cloud.ibm.com/)
