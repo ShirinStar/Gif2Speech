@@ -12,9 +12,9 @@ const fetchGif = async () => {
   }
 }
 
-const userSearch = async (search) => {
+const userSearch = async (newGif) => {
   try {
-    const resp = await axios(`${BASE_URL}/search?q=${search}&api_key=${apiKey}`)
+    const resp = await axios(`${BASE_URL}/search?q=${newGif}&api_key=${apiKey}`)
     return resp.data.data;
   } catch(error) {
     console.log('not working', error);

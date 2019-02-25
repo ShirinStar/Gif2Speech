@@ -1,11 +1,11 @@
 body {
   margin-left: 0;
   margin-top: 0;
-  background-image: url('https://media.giphy.com/media/CA3X0kpubZm5G/giphy.gif');
+  /* background-image: url('https://media.giphy.com/media/CA3X0kpubZm5G/giphy.gif'); */
 }
 
 h1 {
-  color: yellow;
+  color: black;
   font-size: 100px;
   font-weight: 800;
   font-family: "Helvetica Neue";

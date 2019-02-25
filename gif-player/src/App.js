@@ -11,28 +11,19 @@ class App extends Component {
     this.state= {
       gifs: []
     }
-  }
-
-  async componentDidMount() {
-    try {
-      const gifs = await fetchGif();
-      this.setState({
-        gifs
-      })
-    }
-    catch(error){
-      console.log(error);
-    }
+    this.searchText = this.searchText.bind(this);
   }
 
 //search gif by word
 async searchText(newGif){
     console.log(newGif);
+    // debugger;
     try {
-      const newGif = await userSearch();
+      const gifResp = await userSearch(newGif);
         this.setState({
-          newGif: this.searchText.gif.value
+          gifs: gifResp
         })
+        // debugger;
       }
       catch(error){
       console.log(error);
@@ -40,12 +31,18 @@ async searchText(newGif){
   }
 
   render() {
+    const {newGif} = this.state;
     return (
       <div className="App">
           <div className='home'>
             <h1>GIF to SPEECH</h1>
           </div>
         <SearchText searchText={this.searchText}/>
+        {this.state.gifs.map(cats => (
+          <div>
+          <img src={cats.images.preview_gif.url} />
+          </div>
+        ))}
         <VoicePlayer
         play
         text="Hey Drake Brian and Jason.. "
