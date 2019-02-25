@@ -5,7 +5,7 @@ const BASE_URL = 'http://api.giphy.com/v1/gifs';
 const fetchGif = async () => {
   try {
     const resp = await axios(`${BASE_URL}/search?q=ryan+gosling&api_key=${apiKey}`)
-    return resp.data;
+    return resp.data.data;
   } catch(error) {
     console.log('not working', error);
     return [];
@@ -15,7 +15,7 @@ const fetchGif = async () => {
 const userSearch = async (search) => {
   try {
     const resp = await axios(`${BASE_URL}/search?q=${search}&api_key=${apiKey}`)
-    return resp.data;
+    return resp.data.data;
   } catch(error) {
     console.log('not working', error);
     return [];
