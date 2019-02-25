@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import { VoicePlayer, VoiceRecognition } from 'react-voice-components';
 import './App.css';
 import { fetchGif, userSearch } from './services/giphy';
+import SearchText from './components/SearchText';
+
 
 class App extends Component {
-  constructor(){
+  constructor() {
     super();
     this.state= {
       gifs: []
@@ -23,15 +25,30 @@ class App extends Component {
     }
   }
 
+//search gif by word
+async searchText(newGif){
+    console.log(newGif);
+    try {
+      const newGif = await userSearch();
+        this.setState({
+          newGif: this.searchText.gif.value
+        })
+      }
+      catch(error){
+      console.log(error);
+    }
+  }
+
   render() {
     return (
       <div className="App">
           <div className='home'>
             <h1>GIF to SPEECH</h1>
           </div>
+        <SearchText searchText={this.searchText}/>
         <VoicePlayer
         play
-        text="Hey Drake Brian and Jason.."
+        text="Hey Drake Brian and Jason.. "
         />
       </div>
     );
