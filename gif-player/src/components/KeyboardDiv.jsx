@@ -7,7 +7,7 @@ return (
   <div className="Keyboard-div">
     {keyboard.map(gifBox => (
         gifBox.keyName,
-        <GifList gif={gifBox} />
+        console.log(gifBox.keyName)
     ))}
   </div>
   )

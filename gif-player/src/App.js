@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { VoicePlayer, VoiceRecognition } from 'react-voice-components';
+import { Route, Link } from 'react-router-dom';
 import './App.css';
 import { fetchGif, userSearch } from './services/giphy';
 import SearchText from './components/SearchText';
 import GifList from './components/GifList';
+import KeyboardDiv from './components/KeyboardDiv';
 
 
 class App extends Component {
@@ -58,19 +60,29 @@ async searchText(newGif){
   }
 
   render() {
-    const {newGif } = this.state;
+    const { newGif } = this.state;
     return (
       <div className="App">
           <div className='home'>
             <h1>GIF to SPEECH</h1>
           </div>
-        <GifList gifs={this.state.gifs} />
-
-        <SearchText searchText={this.searchText}/>
         <VoicePlayer
         play
-        text="Hey David thank you for the help! .. "
+        text="We are working! .. "
         />
+
+        <div className='btnWarp'>
+          <Link to="/search-text"> + </Link>
+        </div>
+        <main>
+          <Route path="/search-text" render={() => (
+            <div>
+              <SearchText searchText={this.searchText}/>
+              <GifList gifs={this.state.gifs} />
+              <KeyboardDiv keyboard={this.state.keyboard}/>
+            </div>
+        )} />
+      </main>
       </div>
     );
   }
