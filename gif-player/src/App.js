@@ -64,8 +64,8 @@ async searchText(newGif){
           <div className='home'>
             <h1>GIF to SPEECH</h1>
           </div>
+        <GifList gifs={this.state.gifs} />
 
-        <GifList gifs={this.state.gifs}/>
         <SearchText searchText={this.searchText}/>
         <VoicePlayer
         play
