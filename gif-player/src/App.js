@@ -82,6 +82,7 @@ async searchText(newGif){
               <KeyboardDiv keyboard={this.state.keyboard}/>
             </div>
         )} />
+        
       </main>
       </div>
     );

@@ -32,10 +32,6 @@ export class SearchText extends Component {
       value={this.state.value}
       onChange={this.onChange}
     />
-    <input className="submitSearch"
-      type='submit'
-      value='submit'
-    />
     </form>
   </div>
     )
