@@ -6,7 +6,7 @@ export default (props) => {
     <div className="Gif-list">
     {gifs.map(gif => (
       <div>
-      <img src={gif.images.preview_gif.url} />
+      <img src={gif[0].images.preview_gif.url} />
       </div>
     ))}
   </div>

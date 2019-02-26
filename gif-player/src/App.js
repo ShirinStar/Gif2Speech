@@ -47,11 +47,14 @@ async searchText(newGif){
     // debugger;
     try {
       const gifResp = await userSearch(newGif);
-        this.setState({
-          gifs: gifResp,
+      console.log(gifResp);
+        this.setState(prevState => {
+          return {
+          gifs: [...prevState.gifs, gifResp],
           currentGif: gifResp,
           currentWord: newGif
-        })
+        };
+      });
         // debugger;
       }
       catch(error){
@@ -70,19 +73,20 @@ async searchText(newGif){
         play
         text="We are working! .. "
         />
-
+        <GifList gifs={this.state.gifs} />
         <div className='btnWarp'>
+
           <Link to="/search-text"> + </Link>
         </div>
         <main>
           <Route path="/search-text" render={() => (
             <div>
               <SearchText searchText={this.searchText}/>
-              <GifList gifs={this.state.gifs} />
+
               <KeyboardDiv keyboard={this.state.keyboard}/>
             </div>
         )} />
-        
+
       </main>
       </div>
     );

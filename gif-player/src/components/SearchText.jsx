@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { withRouter } from "react-router";
 
 export class SearchText extends Component {
   constructor(){
@@ -19,6 +19,7 @@ export class SearchText extends Component {
     const { value } = e.target;
     this.props.searchText(this.state.value);
     this.setState({ value: '' })
+    this.props.history.push('/');
   }
 
   render() {
@@ -38,4 +39,4 @@ export class SearchText extends Component {
   }
 }
 
-export default SearchText
+export default withRouter (SearchText)
