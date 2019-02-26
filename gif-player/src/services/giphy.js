@@ -14,14 +14,13 @@ const fetchGif = async () => {
 
 const userSearch = async (newGif) => {
   try {
-    const resp = await axios(`${BASE_URL}/search?q=${newGif}&api_key=${apiKey}`)
+    const resp = await axios(`${BASE_URL}/search?q=${newGif}&api_key=${apiKey}&limit=1`)
     return resp.data.data;
   } catch(error) {
     console.log('not working', error);
     return [];
   }
 }
-
 
 export {
   fetchGif,

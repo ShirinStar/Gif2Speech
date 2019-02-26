@@ -3,13 +3,38 @@ import { VoicePlayer, VoiceRecognition } from 'react-voice-components';
 import './App.css';
 import { fetchGif, userSearch } from './services/giphy';
 import SearchText from './components/SearchText';
+import GifList from './components/GifList';
 
 
 class App extends Component {
   constructor() {
     super();
     this.state= {
-      gifs: []
+      gifs: [],
+      keyboard: [{
+        keyName: 'Q',
+        keyCode: '81',
+        word: '',
+        gif: null
+      },
+      {
+        keyName: 'W',
+        keyCode: '87',
+        word: '',
+        gif: null
+      },
+      {
+        keyName: 'E',
+        keyCode: '69',
+        word: '',
+        gif: null
+      },
+      {
+        keyName: 'R',
+        keyCode: '82',
+        word: '',
+        gif: null
+      }]
     }
     this.searchText = this.searchText.bind(this);
   }
@@ -21,7 +46,9 @@ async searchText(newGif){
     try {
       const gifResp = await userSearch(newGif);
         this.setState({
-          gifs: gifResp
+          gifs: gifResp,
+          currentGif: gifResp,
+          currentWord: newGif
         })
         // debugger;
       }
@@ -31,21 +58,18 @@ async searchText(newGif){
   }
 
   render() {
-    const {newGif} = this.state;
+    const {newGif } = this.state;
     return (
       <div className="App">
           <div className='home'>
             <h1>GIF to SPEECH</h1>
           </div>
+
+        <GifList gifs={this.state.gifs}/>
         <SearchText searchText={this.searchText}/>
-        {this.state.gifs.map(cats => (
-          <div>
-          <img src={cats.images.preview_gif.url} />
-          </div>
-        ))}
         <VoicePlayer
         play
-        text="Hey Drake Brian and Jason.. "
+        text="Hey David thank you for the help! .. "
         />
       </div>
     );

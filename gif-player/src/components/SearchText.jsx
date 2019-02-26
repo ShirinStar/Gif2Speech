@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 
+
 export class SearchText extends Component {
   constructor(){
     super();
-    this. state = {
+    this.state = {
       value: ''
     }
     this.onSubmit = this.onSubmit.bind(this);
