@@ -13,6 +13,12 @@ h1 {
   justify-content: center;
 }
 
+p {
+  color: red;
+  font-size: 20px;
+  background-color: yellow;
+}
+
 .btnWarp {
   border: 2px solid #00FFF3;
   font-family: "Helvetica Neue";

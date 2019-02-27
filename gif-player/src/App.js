@@ -14,7 +14,7 @@ class App extends Component {
       gifs: [],
       keyboards: [],
       playSounds: [],
-      letters:['q','w','e','r','t','a','s','d','f','g','z','x','c']
+      letters:['q','w','e','r','t','a','s','d','f','g','z','x','c','v','b']
     }
     this.searchText = this.searchText.bind(this);
     this.handleSound = this.handleSound.bind(this);
@@ -25,8 +25,6 @@ async searchText(newGif){
     try {
       const gifResp = await userSearch(newGif);
       const keyboards = {
-        keyName: 'q',
-        keyCode: '81',
         word: newGif,
         gif: gifResp
       }
@@ -35,12 +33,12 @@ async searchText(newGif){
           gifs: [...prevState.gifs, gifResp],
           currentGif: gifResp,
           currentWord: newGif,
-          keyboards: [...prevState.keyboards, keyboards],
+          keyboards: [...prevState.keyboards, keyboards]
       };
     });
   }
         catch(error){
-      console.log(error);
+        console.log(error);
   }
 }
 
@@ -48,9 +46,10 @@ async searchText(newGif){
     this.setState(prevState => {
       return {
       playSounds: [...prevState.playSounds, word]
+      
     };
-  })
-}
+  });
+};
 
   render() {
     const { newGif } = this.state;
@@ -60,8 +59,8 @@ async searchText(newGif){
         <h1>GIF to SPEECH</h1>
       </div>
       {
-        this.state.letters.map((letter, i) =>(
-          <KeyHandler
+        this.state.letters.map((letter, i) => (
+          this.state.keyboards[i] && <KeyHandler
             keyValue={letter}
             onKeyHandle={() => {
               this.handleSound(this.state.keyboards[i].word);
@@ -69,10 +68,11 @@ async searchText(newGif){
           />
         ))}
         <GifList gifs={this.state.gifs} />
-        {
-          this.state.playSounds.map((props, i) =>(
-            <TextToSpeech word={this.state.playSounds[i]}/>
-          ))}
+
+        {this.state.playSounds.map(sound => (
+            <TextToSpeech word={sound}/>
+        ))}
+
         <div className='btnWarp'>
           <Link to="/search-text"> + </Link>
         </div>
