@@ -39,3 +39,39 @@ margin-left: 5%;
 border: none;
 text-align: center;
 }
+
+.gif-keyboards {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  height: 80%;
+  width: 80%;
+  background: #fff;
+  margin-left: -40%;
+  z-index: -1;
+}
+
+.gif-cointainer {
+  height: 100%;
+  margin: 0 auto;
+  width: 800px;
+  z-index: -1;
+}
+
+.gifBox {
+  cursor: pointer;
+  float: left;
+  width: 16.66666%;
+  margin: 0;
+  height: 25%;
+  text-align: center;
+  font-size: 3em;
+  box-sizing: border-box;
+  z-index: -1;
+}
+
+.gifImg {
+  width: 140px;
+  height: 140px;
+  border: 1px solid #00FFF3;
+}

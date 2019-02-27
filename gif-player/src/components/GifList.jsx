@@ -3,11 +3,13 @@ import React from 'react';
 export default (props) => {
   const { gifs } = props;
   return (
-    <div className="Gif-list">
+  <div className="gif-keyboards">
+    <div className="gif-cointainer">
     {gifs.map(gif => (
-      <div>
-      <img src={gif[0].images.fixed_width.url} alt=''/>
+      <div className="gifBox">
+      <img className="gifImg" src={gif[0].images.fixed_width.url} alt=''/>
       </div>
     ))}
   </div>
+</div>
 )}

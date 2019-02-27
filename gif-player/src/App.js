@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import TextToSpeech from './components/TextToSpeech';
 import KeyHandler, { KEYPRESS } from 'react-key-handler';
 import { Route, Link } from 'react-router-dom';
 import './App.css';
 import { fetchGif, userSearch } from './services/giphy';
+import TextToSpeech from './components/TextToSpeech';
 import SearchText from './components/SearchText';
 import GifList from './components/GifList';
 
@@ -67,14 +67,12 @@ async searchText(newGif){
               this.handleSound(this.state.keyboards[i].word);
             }}
            />
-        ))
-      }
+        ))}
         <GifList gifs={this.state.gifs} />
         {
           this.state.playSounds.map((props, i) =>(
             <TextToSpeech word={this.state.playSounds[i]}/>
-          ))
-        }
+          ))}
         <div className='btnWarp'>
           <Link to="/search-text"> + </Link>
         </div>
