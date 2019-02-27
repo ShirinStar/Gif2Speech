@@ -12,12 +12,12 @@ class App extends Component {
     super();
     this.state= {
       gifs: [],
-      keyboard: {
+      keyboard: [{
         keyName: 'q',
         keyCode: '81',
         word: '',
         gif: null
-      },
+      }],
       playSounds: [{
         soundWord: ''
       }]
@@ -33,17 +33,18 @@ async searchText(newGif){
     try {
       const gifResp = await userSearch(newGif);
       console.log(gifResp);
+      const keyboard = {
+        keyName: 'q',
+        keyCode: '81',
+        word: newGif,
+        gif: gifResp
+      }
         this.setState(prevState => {
           return {
           gifs: [...prevState.gifs, gifResp],
           currentGif: gifResp,
           currentWord: newGif,
-          keyboard: [{
-            keyName: 'q',
-            keyCode: '81',
-            word: newGif,
-            gif: gifResp
-          }]
+          keyboard: [...prevState.keyboard, keyboard]
         };
       });
     }
@@ -61,7 +62,6 @@ async searchText(newGif){
     })
   }
 
-
   render() {
     const { newGif } = this.state;
     return (
@@ -75,8 +75,8 @@ async searchText(newGif){
        />
         <GifList gifs={this.state.gifs} />
         {
-          this.state.playSounds.map(sound =>(
-            <TextToSpeech />
+          this.state.playSounds.map((props, i) =>(
+            <TextToSpeech word={this.state.keyboard[i].word}/>
           ))
         }
         <div className='btnWarp'>
