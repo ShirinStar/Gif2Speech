@@ -14,7 +14,7 @@ class App extends Component {
       gifs: [],
       keyboards: [],
       playSounds: [],
-      letters:['q','w','e','r','t']
+      letters:['q','w','e','r','t','a','s','d','f','g','z','x','c']
     }
     this.searchText = this.searchText.bind(this);
     this.handleSound = this.handleSound.bind(this);
@@ -66,7 +66,7 @@ async searchText(newGif){
             onKeyHandle={() => {
               this.handleSound(this.state.keyboards[i].word);
             }}
-           />
+          />
         ))}
         <GifList gifs={this.state.gifs} />
         {

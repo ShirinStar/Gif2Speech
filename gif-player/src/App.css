@@ -61,9 +61,9 @@ text-align: center;
 .gifBox {
   cursor: pointer;
   float: left;
-  width: 16.66666%;
+  width: 19%;
   margin: 0;
-  height: 25%;
+  height: 22%;
   text-align: center;
   font-size: 3em;
   box-sizing: border-box;
@@ -74,4 +74,6 @@ text-align: center;
   width: 140px;
   height: 140px;
   border: 1px solid #00FFF3;
+  margin-right: 5px;
+  margin-left: 5px;
 }
