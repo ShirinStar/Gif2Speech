@@ -46,46 +46,52 @@ async searchText(newGif){
     this.setState(prevState => {
       return {
       playSounds: [...prevState.playSounds, word]
-      
     };
   });
 };
 
   render() {
+    console.log(this.state.keyboards);
+    console.log(this.state.keyboards.length);
     const { newGif } = this.state;
     return (
       <div className="App">
-      <div className='home'>
-        <h1>GIF to SPEECH</h1>
-      </div>
+        <div className='home'>
+          <h1>GIF to SPEECH</h1>
+        </div>
       {
         this.state.letters.map((letter, i) => (
           this.state.keyboards[i] && <KeyHandler
+            keyEventName='keydown'
             keyValue={letter}
             onKeyHandle={() => {
               this.handleSound(this.state.keyboards[i].word);
             }}
           />
         ))}
+
         <GifList gifs={this.state.gifs} />
 
         {this.state.playSounds.map(sound => (
             <TextToSpeech word={sound}/>
         ))}
 
+        {this.state.keyboards.length===15 ? 'hit your keys':
         <div className='btnWarp'>
           <Link to="/search-text"> + </Link>
-        </div>
         <main>
           <Route path="/search-text" render={() => (
             <div>
               <SearchText searchText={this.searchText}/>
             </div>
-        )} />
+            )}
+          />
         </main>
         </div>
-      );
-    }
+      }
+    </div>
+    )
   }
+}
 
 export default App;
