@@ -5,7 +5,6 @@ import { VoicePlayer, VoiceRecognition } from 'react-voice-components';
 
 const TextToSpeech = (props) => {
   const { word } = props;
-  console.log(props);
   return (
     <VoicePlayer
       play
