@@ -43,22 +43,38 @@ async searchText(newGif){
 }
 
   handleSound(word) {
-    const isShown = false;
     this.setState(prevState => {
       return {
       playSounds: [...prevState.playSounds, word],
-      isShown: !prevState.isShown
     };
   });
-};
+}
 
   render() {
     const { newGif, isShown } = this.state;
     return (
       <div className="App">
+
         <div className='home'>
           <h1>GIF to SPEECH</h1>
+
+          {this.state.keyboards.length===15 ? 'hit your keys':
+          <div className='btnWarp'>
+            <Link to="/search-text"> add a Gif </Link>
+          <main>
+            <Route path="/search-text" render={() => (
+              <div>
+                <SearchText searchText={this.searchText}/>
+              </div>
+              )}
+            />
+          </main>
+          </div>
+        }
         </div>
+
+        <GifList gifs={this.state.gifs} />
+
       {
         this.state.letters.map((letter, i) => (
           this.state.keyboards[i] && <KeyHandler
@@ -69,29 +85,13 @@ async searchText(newGif){
             }}
           />
         ))}
-        <div>
-        { this.state.isShown ? <GifList gifs={this.state.gifs} /> : null }
-        </div>
 
-        <KeyHandler onKeyHandle={() => {this.handleSound()}} />
+
 
         {this.state.playSounds.map(sound => (
             <TextToSpeech word={sound}/>
         ))}
 
-        {this.state.keyboards.length===15 ? 'hit your keys':
-        <div className='btnWarp'>
-          <Link to="/search-text"> + </Link>
-        <main>
-          <Route path="/search-text" render={() => (
-            <div>
-              <SearchText searchText={this.searchText}/>
-            </div>
-            )}
-          />
-        </main>
-        </div>
-      }
     </div>
     )
   }
