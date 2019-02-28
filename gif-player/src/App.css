@@ -1,13 +1,14 @@
 body {
   margin-left: 0;
   margin-top: 0;
-
   background-color: #03FEC7;
   /* background-image: url('https://media.giphy.com/media/CA3X0kpubZm5G/giphy.gif'); */
 }
 
 .home {
   /* display: flex; */
+  /* border: 3px solid #ff0200;
+  border-radius: 20%; */
 }
 
 h1 {
@@ -17,22 +18,22 @@ h1 {
   margin-left: 10%;
   margin-top: 3%;
   color: white;
-  font-size: 100px;
+  font-size: 80px;
   font-weight: 800;
   letter-spacing: -1px;
 }
 
 h1:hover {
-  letter-spacing: 5px;
+  letter-spacing: -5px;
   color: white;
 }
 
 .btnWarp {
   margin: 0 auto;
-  margin-left: 5%;
+  margin-top: 2px;
+  margin-left: 10%;
   margin-bottom: 20px;
   padding: 16px;
-  max-width: 105px;
   justify-content: center;
   border-radius: 25%;
   /* box-shadow: 5px 10px 8px #999; */
@@ -41,23 +42,30 @@ h1:hover {
 a {
   font-family: 'Arimo';
   text-decoration: none;
-  color: #DAD6FF;
+  /* color: #FEFF00; */
   text-align: center;
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 600;
+  color: white;
+  background-color: black;
+  border-radius: 21%;
+  padding: 3px;
+  border: 1px solid #ff0200;
 }
 
 .btnWarp:hover {
-  background-color: #ff88a8;
+  /* background-color: #ff88a8;
   border: 4px solid #ff0200;
-  border-radius: 25%;
-
+  border-radius: 25%; */
 }
 
 a:hover {
-  color: white;
-  background-color: #ff88a8;
-  border-radius: 25%;
+  color: #ff0200;
+  font-weight: 400;
+  /* background-color: black;
+  border-radius: 21%;
+  padding: 3px;
+  border: 1px solid #ff0200; */
 }
 
 p {
@@ -66,41 +74,45 @@ p {
   background-color: yellow;
 }
 
-
-
 .typeGif {
-font-family: "Helvetica Neue";
-font-size: 70px;
-color: #00FFF3;
-margin-left: 5%;
-border: none;
-text-align: center;
+  display: block;
+  font-family: 'Arimo';
+  font-size: 22px;
+  padding: 6px;
+  margin-top: 15px;
+  color: #00FFF3;
+  border: none;
+  /* text-align: center; */
 }
 
 .gif-keyboards {
   position: fixed;
   top: 28%;
   left: 50%;
-  height: 68%;
+  height: 70%;
   width: 80%;
-  background: #fff;
+  /* background: #fff; */
   margin-left: -40%;
   z-index: -1;
 }
 
 .gif-cointainer {
-  height: 100%;
+  height: 80%;
   margin: 0 auto;
-  width: 800px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border: 3px solid black;
+  border-radius: 3%;
+  width: 850px;
   z-index: -1;
 }
 
 .gifBox {
   cursor: pointer;
   float: left;
-  width: 19%;
+  width: 20%;
   margin: 0;
-  height: 22%;
+  height: 34%;
   text-align: center;
   font-size: 3em;
   box-sizing: border-box;
@@ -110,6 +122,10 @@ text-align: center;
 .gifImg {
   width: 140px;
   height: 140px;
-  border: 2px solid #ff88a8;
+  border: 2px solid #5649e1;
   margin-left: 5px;
+}
+
+.gifImg:hover {
+  cursor: none;
 }

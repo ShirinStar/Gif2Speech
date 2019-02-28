@@ -60,7 +60,7 @@ async searchText(newGif){
 
           {this.state.keyboards.length===15 ? 'hit your keys':
           <div className='btnWarp'>
-            <Link to="/search-text"> add a Gif </Link>
+            <Link to="/search-text"> build your keyboard </Link>
           <main>
             <Route path="/search-text" render={() => (
               <div>
