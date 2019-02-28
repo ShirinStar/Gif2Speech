@@ -46,6 +46,7 @@ async searchText(newGif){
     this.setState(prevState => {
       return {
       playSounds: [...prevState.playSounds, word],
+
     };
   });
 }
@@ -55,14 +56,13 @@ async searchText(newGif){
     return (
       <div className="App">
 
+      <div className='home'>
         <div className='header'>
           <h1>GIF to SPEECH</h1>
           <h2 className='tagline'> playing verbally again </h2>
         </div>
-
-        <div className='main'>
-        <h2 className='rule'> build your keyboard </h2>
-          {this.state.keyboards.length===15 ? 'hit your keys':
+        <div clssName='btnDiv'>
+          {this.state.keyboards.length===15 ? <p className='done'> 'hit your keys' </p>:
           <div className='btnWarp'>
             <Link to="/search-text"> click to add Gifs </Link>
           <main className='search'>
@@ -75,7 +75,8 @@ async searchText(newGif){
           </main>
           </div>
         }
-        </div>
+      </div>
+    </div>
 
         <GifList gifs={this.state.gifs} />
 
@@ -89,8 +90,6 @@ async searchText(newGif){
             }}
           />
         ))}
-
-
 
         {this.state.playSounds.map(sound => (
             <TextToSpeech word={sound}/>

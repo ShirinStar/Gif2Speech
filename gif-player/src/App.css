@@ -1,82 +1,58 @@
 body {
   margin-left: 0;
   margin-top: 0;
-  background-color: white;
-  /* background-image: url('https://media.giphy.com/media/CA3X0kpubZm5G/giphy.gif'); */
+  background-color: #E62714;
 }
 
 .home {
-  /* display: flex; */
-  /* border: 3px solid #ff0200;
-  border-radius: 20%; */
+  display: flex;
+}
+
+.header{
+  margin: 0 auto;
+  margin-left: 10%;
 }
 
 h1 {
-  font-family: 'Ubuntu';
-  display: block;
-  margin: 0 auto;
-  margin-left: 10%;
-  margin-top: 3%;
-  color: #1700FE;
-  font-size: 55px;
+  font-family: 'Amatic SC';
+  color: #FFFA90;
+  font-size: 100px;
   font-weight: 800;
-  letter-spacing: -1px;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 40px;
 }
 
 .tagline {
-  font-family: 'Questrial';
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-size: 24px;
+  color: white;
   display: block;
   margin: 0 auto;
-  margin-left: 11%;
-  margin-top: 8px;
-  /* margin-top: 3%; */
-}
-
-
-h1:hover {
-  /* letter-spacing: -5px;
-  color: white; */
-}
-
-.main {
-  display: flex;
-  margin: 0 auto;
-}
-
-
-.rule{
-  margin-top: 2%;
-  display: block;
-  float: left;
-  font-family: 'Questrial';
-  margin-left: 33%;
-}
-
-.search {
- float: right;
- justify-content: center;
+  margin-left: 3%;
+  letter-spacing: 2px;
 }
 
 .btnWarp {
-
-  float: right;
-  /* margin-bottom: 20px; */
+  margin: 0 auto;
+  margin-left: -55%;
+  margin-top: 35%;
   padding: 16px;
   justify-content: center;
   border-radius: 25%;
-  /* box-shadow: 5px 10px 8px #999; */
 }
 
 a {
-  margin-top: 3%;
-  font-family: 'Questrial';
+  font-family: 'Open Sans';
   text-decoration: none;
   /* color: #FEFF00; */
   text-align: center;
-  font-size: 28px;
-  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: 1px;
+  font-weight: 400;
   color: white;
-  background-color: black;
+  /* background-color: black; */
   border-radius: 21%;
   padding: 3px;
   border: 1px solid #ff0200;
@@ -97,26 +73,27 @@ a:hover {
   border: 1px solid #ff0200; */
 }
 
-p {
+.done {
   color: red;
   font-size: 20px;
   background-color: yellow;
 }
 
 .typeGif {
-  display: block;
+  /* display: left; */
   font-family: 'Arimo';
   font-size: 22px;
   padding: 6px;
   margin-top: 15px;
-  color: #00FFF3;
+  color: #1816FA;
   border: none;
+  max-width: 200px;
   /* text-align: center; */
 }
 
 .gif-keyboards {
   position: fixed;
-  top: 28%;
+  top: 27%;
   left: 50%;
   height: 70%;
   width: 80%;
@@ -130,9 +107,9 @@ p {
   margin: 0 auto;
   padding-top: 2%;
   padding-bottom: 2%;
-  border: 3px solid #ffa3a7;
-  background: #fff;
-  border-radius: 3%;
+  border: 2px solid black;
+  background: #FFC1CD;
+  border-radius: 2%;
   width: 850px;
   z-index: -1;
 }
@@ -152,8 +129,8 @@ p {
 .gifImg {
   width: 140px;
   height: 140px;
-  border: 2px solid black;
-  box-shadow: 2px 2px 2px #999;
+  border: 2px solid #FFC1CD;
+  /* box-shadow: 2px 2px 2px #999; */
   margin-left: 5px;
 }
 
