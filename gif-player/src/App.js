@@ -6,6 +6,7 @@ import { fetchGif, userSearch } from './services/giphy';
 import TextToSpeech from './components/TextToSpeech';
 import SearchText from './components/SearchText';
 import GifList from './components/GifList';
+import Footer from './components/Footer';
 
 class App extends Component {
   constructor() {
@@ -51,18 +52,20 @@ async searchText(newGif){
   });
 }
 
+
+
   render() {
     const { newGif, isShown } = this.state;
     return (
       <div className="App">
-
+          <Footer />
       <div className='home'>
         <div className='header'>
           <h1>GIF to SPEECH</h1>
           <h2 className='tagline'> playing verbally again </h2>
         </div>
         <div clssName='btnDiv'>
-          {this.state.keyboards.length===15 ? <p className='done'> 'hit your keys' </p>:
+          {this.state.keyboards.length===15 ? <p className='done'> Now just play and hit your keys! </p>:
           <div className='btnWarp'>
             <Link to="/search-text"> click to add Gifs </Link>
           <main className='search'>
@@ -76,10 +79,9 @@ async searchText(newGif){
           </div>
         }
       </div>
+
     </div>
-
         <GifList gifs={this.state.gifs} />
-
       {
         this.state.letters.map((letter, i) => (
           this.state.keyboards[i] && <KeyHandler
@@ -90,7 +92,6 @@ async searchText(newGif){
             }}
           />
         ))}
-
         {this.state.playSounds.map(sound => (
             <TextToSpeech word={sound}/>
         ))}
