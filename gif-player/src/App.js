@@ -43,17 +43,17 @@ async searchText(newGif){
 }
 
   handleSound(word) {
+    const isShown = false;
     this.setState(prevState => {
       return {
-      playSounds: [...prevState.playSounds, word]
+      playSounds: [...prevState.playSounds, word],
+      isShown: !prevState.isShown
     };
   });
 };
 
   render() {
-    console.log(this.state.keyboards);
-    console.log(this.state.keyboards.length);
-    const { newGif } = this.state;
+    const { newGif, isShown } = this.state;
     return (
       <div className="App">
         <div className='home'>
@@ -69,8 +69,11 @@ async searchText(newGif){
             }}
           />
         ))}
+        <div>
+        { this.state.isShown ? <GifList gifs={this.state.gifs} /> : null }
+        </div>
 
-        <GifList gifs={this.state.gifs} />
+        <KeyHandler onKeyHandle={() => {this.handleSound()}} />
 
         {this.state.playSounds.map(sound => (
             <TextToSpeech word={sound}/>
