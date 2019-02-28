@@ -6,7 +6,7 @@ import { fetchGif, userSearch } from './services/giphy';
 import TextToSpeech from './components/TextToSpeech';
 import SearchText from './components/SearchText';
 import GifList from './components/GifList';
-import Footer from './components/Footer';
+import Header from './components/Header';
 
 class App extends Component {
   constructor() {
@@ -58,7 +58,7 @@ async searchText(newGif){
     const { newGif, isShown } = this.state;
     return (
       <div className="App">
-          <Footer />
+          <Header />
       <div className='home'>
         <div className='header'>
           <h1>GIF to SPEECH</h1>
