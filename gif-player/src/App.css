@@ -1,7 +1,7 @@
 body {
   margin-left: 0;
   margin-top: 0;
-  background-color: #FEF983;
+  background-color: white;
   /* background-image: url('https://media.giphy.com/media/CA3X0kpubZm5G/giphy.gif'); */
 }
 
@@ -23,16 +23,44 @@ h1 {
   letter-spacing: -1px;
 }
 
+.tagline {
+  font-family: 'Questrial';
+  display: block;
+  margin: 0 auto;
+  margin-left: 11%;
+  margin-top: 8px;
+  /* margin-top: 3%; */
+}
+
+
 h1:hover {
   /* letter-spacing: -5px;
   color: white; */
 }
 
-.btnWarp {
+.main {
+  display: flex;
   margin: 0 auto;
-  margin-top: 2px;
-  margin-left: 10%;
-  margin-bottom: 20px;
+}
+
+
+.rule{
+  margin-top: 2%;
+  display: block;
+  float: left;
+  font-family: 'Questrial';
+  margin-left: 33%;
+}
+
+.search {
+ float: right;
+ justify-content: center;
+}
+
+.btnWarp {
+
+  float: right;
+  /* margin-bottom: 20px; */
   padding: 16px;
   justify-content: center;
   border-radius: 25%;
@@ -40,7 +68,8 @@ h1:hover {
 }
 
 a {
-  font-family: 'Arimo';
+  margin-top: 3%;
+  font-family: 'Questrial';
   text-decoration: none;
   /* color: #FEFF00; */
   text-align: center;
@@ -101,7 +130,8 @@ p {
   margin: 0 auto;
   padding-top: 2%;
   padding-bottom: 2%;
-  border: 3px solid black;
+  border: 3px solid #ffa3a7;
+  background: #fff;
   border-radius: 3%;
   width: 850px;
   z-index: -1;
@@ -122,7 +152,8 @@ p {
 .gifImg {
   width: 140px;
   height: 140px;
-  border: 2px solid #5649e1;
+  border: 2px solid black;
+  box-shadow: 2px 2px 2px #999;
   margin-left: 5px;
 }
 

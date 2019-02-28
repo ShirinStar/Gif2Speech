@@ -55,13 +55,17 @@ async searchText(newGif){
     return (
       <div className="App">
 
-        <div className='home'>
+        <div className='header'>
           <h1>GIF to SPEECH</h1>
+          <h2 className='tagline'> playing verbally again </h2>
+        </div>
 
+        <div className='main'>
+        <h2 className='rule'> build your keyboard </h2>
           {this.state.keyboards.length===15 ? 'hit your keys':
           <div className='btnWarp'>
-            <Link to="/search-text"> build your keyboard </Link>
-          <main>
+            <Link to="/search-text"> click to add Gifs </Link>
+          <main className='search'>
             <Route path="/search-text" render={() => (
               <div>
                 <SearchText searchText={this.searchText}/>
