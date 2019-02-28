@@ -92,48 +92,51 @@ a:hover {
 
 .gif-keyboards {
   position: fixed;
-  top: 30%;
+  top: 26%;
   left: 50%;
-  height: 70%;
+  height: 75%;
   width: 80%;
   margin-left: -40%;
   z-index: -1;
 }
 
 .gif-cointainer {
-  height: 80%;
+  height: 77%;
   margin: 0 auto;
   padding-top: 2%;
   padding-bottom: 2%;
   border: 2px solid black;
   background: white;
-  border-radius: 2%;
+  border-radius: 1%;
   width: 850px;
   z-index: -1;
 }
 
 .gifBox {
-  cursor: pointer;
   float: left;
   width: 20%;
   margin: 0;
-  height: 34%;
+  height: 36%;
   text-align: center;
-  font-size: 3em;
+  /* font-size: 3em; */
   box-sizing: border-box;
   z-index: -1;
+  /* border: 1px solid black; */
 }
 
 .gifImg {
   width: 140px;
   height: 140px;
-  /* border: 2px solid black; */
-  /* box-shadow: 2px 2px 2px #999; */
   margin-left: 5px;
 }
 
-.gifImg:hover {
-  cursor: none;
+.letter-show {
+/* background-color: grey; */
+font-family: 'Open Sans';
+font-weight: 600;
+border-bottom: 1px solid black;
+border-right: 1px solid black;
+
 }
 
 .headerTwo {

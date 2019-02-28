@@ -81,7 +81,7 @@ async searchText(newGif){
       </div>
 
     </div>
-        <GifList gifs={this.state.gifs} />
+        <GifList gifs={this.state.gifs} letters={this.state.letters} />
       {
         this.state.letters.map((letter, i) => (
           this.state.keyboards[i] && <KeyHandler

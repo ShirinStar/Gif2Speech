@@ -30,6 +30,7 @@ export class SearchText extends Component {
       type='text'
       name='value'
       placeholder='type a word ...'
+      autoComplete='off'
       value={this.state.value}
       onChange={this.onChange}
     />
