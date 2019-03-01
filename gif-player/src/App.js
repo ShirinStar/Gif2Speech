@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import KeyHandler, { KEYPRESS } from 'react-key-handler';
 import { Route, Link } from 'react-router-dom';
+import { withRouter } from 'react-router';
 import './App.css';
 import { userSearch } from './services/giphy';
 import TextToSpeech from './components/TextToSpeech';
 import SearchText from './components/SearchText';
 import GifList from './components/GifList';
 import Header from './components/Header';
-import Footer from './components/Footer';
+import Again from './components/Again';
+
 
 class App extends Component {
   constructor() {
@@ -20,6 +22,7 @@ class App extends Component {
     }
     this.searchText = this.searchText.bind(this);
     this.handleSound = this.handleSound.bind(this);
+    this.refreshPage = this.refreshPage.bind(this);
   }
 
 //search gif by word
@@ -52,13 +55,25 @@ async searchText(newGif) {
   });
 }
 
+  refreshPage(){
+    this.setState(prevState => {
+      return {
+          gifs: [],
+          keyboards: [],
+          playSounds: [],
+          letters:['q','w','e','r','t','a','s','d','f','g','z','x','c','v','b']
+  };
+});
+    this.props.history.push('/')
+  }
+
   render() {
     return (
       <div className="App">
         <div className='home'>
           <Header />
           <div className='btnDiv'>
-            {this.state.keyboards.length===15 ? <p className='done'> Now just play and hit your keys! </p>:
+            {this.state.keyboards.length===15 ? <Again refreshPage={this.refreshPage}/> :
             <div className='btnWarp'>
             <Link className='addLink' to='/search-text'> Add Gifs </Link>
             <main className='search'>
@@ -87,10 +102,10 @@ async searchText(newGif) {
         {this.state.playSounds.map(sound => (
             <TextToSpeech word={sound}/>
         ))}
-      <Footer />
+
     </div>
     )
   }
 }
 
-export default App;
+export default withRouter (App);
