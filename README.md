@@ -2,7 +2,7 @@
 
 ### Project description 
 An audio-visual instrument using Giphy and text to speech APIs.
-try it here: gif2speech.surge.sh
+try it here: [gif2speech.surge.sh](gif2speech.surge.sh)
 
 ![screenshots](https://i.imgur.com/XYaE5bH.png)
 ![screenshots](https://i.imgur.com/1RbLOC3.jpg)
