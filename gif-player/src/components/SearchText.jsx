@@ -29,7 +29,7 @@ export class SearchText extends Component {
     <input className ="typeGif"
       type='text'
       name='value'
-      placeholder='type a word ...'
+      placeholder='type something...'
       autoComplete='off'
       value={this.state.value}
       onChange={this.onChange}

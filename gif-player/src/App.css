@@ -22,7 +22,7 @@ display: block;
   max-width: 600px;
   margin: 0 auto;
   margin-top: 35px;
-  margin-left: 40px;
+  margin-left: 50px;
 }
 
 .tagline {
@@ -38,55 +38,52 @@ display: block;
 
 .btnWarp {
   margin: 0 auto;
-  margin-top: 8%;
-  margin-left: 5%;
-  padding: 16px;
-  justify-content: center;
+  margin-top: 7%;
+  margin-left: 6%;
+  padding-left: 20px;
 }
 
-a {
+.addLink {
   font-family: 'Open Sans';
   text-decoration: none;
   text-align: center;
   font-size: 24px;
   letter-spacing: 1px;
-  font-weight: 400;
+  font-weight: 300;
   color: black;
-  padding: 3px;
-  border: 1px solid #E62714;
-  border-radius: 25%;
-  /* background-color: black; */
+  padding: 25px;
+  border: 2px solid #E62714;
+  border-radius: 45%;
+  /* background-color: #FFA3A7; */
 }
 
-a:hover {
-  border: 2px solid #E62714;
-  border-radius: 21%;
-  padding: 3px;
+.addLink:hover {
+  border: 2px solid #FDCDD0;
+  color: #E62714;
+  background-color: #E4D0FF;
 }
 
 .done {
   margin-top: 8%;
   margin-left: 8%;
-  font-family: 'Open Sans';
-  font-size: 24px;
+  font-family: 'Amatic SC';
+  font-size: 40px;
   letter-spacing: 1px;
-  font-weight: 400;
+  font-weight: 600;
   color: black;
   max-width: 150px;
-  border: 1px dotted #fed3d6;
   padding: 25px;
 }
 
 .typeGif {
-  /* display: left; */
   font-family: 'Arimo';
-  font-size: 22px;
+  font-size: 24px;
   padding: 6px;
-  margin-top: 20px;
-  margin-left: 5px;
-  color: #1816FA;
+  margin-top: 50px;
+  color: #1C0CE8;
   border: none;
   max-width: 210px;
+  z-index: 2;
   /* background: transparent !important; */
 }
 
@@ -94,10 +91,11 @@ a:hover {
   position: fixed;
   top: 26%;
   left: 50%;
-  height: 75%;
-  width: 80%;
+  height: 74%;
+  width: 85%;
   margin-left: -40%;
   z-index: -1;
+  background-color: white;
 }
 
 .gif-cointainer {
@@ -118,10 +116,8 @@ a:hover {
   margin: 0;
   height: 36%;
   text-align: center;
-  /* font-size: 3em; */
   box-sizing: border-box;
   z-index: -1;
-  /* border: 1px solid black; */
 }
 
 .gifImg {
@@ -131,22 +127,30 @@ a:hover {
 }
 
 .letter-show {
-/* background-color: grey; */
 font-family: 'Open Sans';
-font-weight: 600;
+font-weight: 500;
 border-bottom: 1px solid black;
-border-right: 1px solid black;
+border-right: 1px solid grey;
 
 }
 
 .headerTwo {
   display: block;
   font-family: 'Open Sans';
+  color: black;
   font-weight: 400;
   text-align: center;
   font-size: 14px;
   margin: auto 0;
-  margin-top: 10px;
-  border-bottom: 1px dotted #fed3d6;
+  border-bottom: 1px dotted grey;
   padding-bottom: 5px;
+  padding-top: 10px;
+}
+
+.gitLink{
+  text-decoration: none;
+  color: black;
+}
+.gitLink:hover {
+  color: #E62714;
 }

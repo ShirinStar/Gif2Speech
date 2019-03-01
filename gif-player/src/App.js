@@ -67,7 +67,7 @@ async searchText(newGif){
         <div clssName='btnDiv'>
           {this.state.keyboards.length===15 ? <p className='done'> Now just play and hit your keys! </p>:
           <div className='btnWarp'>
-            <Link to="/search-text"> click to add Gifs </Link>
+            <Link className='addLink' to="/search-text"> Add Gifs </Link>
           <main className='search'>
             <Route path="/search-text" render={() => (
               <div>
