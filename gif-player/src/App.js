@@ -7,6 +7,7 @@ import TextToSpeech from './components/TextToSpeech';
 import SearchText from './components/SearchText';
 import GifList from './components/GifList';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 class App extends Component {
   constructor() {
@@ -86,6 +87,7 @@ async searchText(newGif) {
         {this.state.playSounds.map(sound => (
             <TextToSpeech word={sound}/>
         ))}
+      <Footer />
     </div>
     )
   }
