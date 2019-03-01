@@ -3,7 +3,8 @@
 ### Project description 
 An audio-visual instrument using Giphy and text to speech APIs.
 
-![screenshots](https://i.imgur.com/XYaE5bH.png)(https://i.imgur.com/1RbLOC3.jpg)
+![screenshots](https://i.imgur.com/XYaE5bH.png)
+![screenshots](https://i.imgur.com/1RbLOC3.jpg)
 
 ### Goals
 I hope that throughout this project to gain a better understanding on the ins and out of react, mainly looked to explore- Form (user input), router, props, conditional functions, connections between two APIs and front-end skills. 
