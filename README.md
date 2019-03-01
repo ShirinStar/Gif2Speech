@@ -10,7 +10,7 @@ An audio-visual instrument using Giphy and text to speech APIs.
 I hope that throughout this project to gain a better understanding on the ins and out of react, mainly looked to explore- Form (user input), router, props, conditional functions, connections between two APIs and front-end skills. 
 
 ### Libraries and technologies in use:
-[React-Key Handler](https://www.npmjs.com/package/react-key-handler), [react-voice-components](https://github.com/grvcoelho/react-voice-components/), React-Router-Dom, Axios and Giphy API. 
+[React-Key Handler](https://www.npmjs.com/package/react-key-handler), [React-Voice-Components](https://github.com/grvcoelho/react-voice-components/), React-Router-Dom, Axios and [Giphy API](https://developers.giphy.com/docs/). 
 
 ### Code Snippet
 
@@ -53,9 +53,6 @@ Design | H | 13
 
 ### Component Hierarchy
 ![Hierarchy sketch](https://i.imgur.com/wiiLKik.jpg)
-
-### Giphy API documentation
-- [link](https://developers.giphy.com/docs/)
 
 ### post MVP
 maybe to add to lyrics API and play songs that way.. :)
