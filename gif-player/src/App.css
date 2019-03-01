@@ -128,7 +128,6 @@ font-family: 'Open Sans';
 font-weight: 500;
 border-bottom: 1px solid black;
 border-right: 1px solid grey;
-
 }
 
 .headerTwo {
@@ -150,4 +149,136 @@ border-right: 1px solid grey;
 }
 .gitLink:hover {
   color: #E62714;
+}
+
+.again {
+  decoration: none;
+  font-family: 'Open Sans';
+  text-decoration: none;
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  color: black;
+  padding: 25px;
+  border: 2px solid #E62714;
+  border-radius: 45%;
+  margin-left: 9%;
+}
+
+.again:hover {
+  border: 2px solid #FDCDD0;
+  color: #E62714;
+  background-color: #E4D0FF;
+}
+
+@media only screen and (max-width: 1500px) {
+
+h1{
+  font-size: 70px;
+}
+
+.tagline {
+  font-size: 18px;
+}
+
+.addLink {
+  font-size: 18px;
+  padding: 22px;
+}
+
+.again {
+  font-size: 18px;
+  padding: 22px;
+}
+
+.typeGif {
+  font-size: 24px;
+  margin-left: 1px;
+}
+
+.done {
+  font-size: 28px;
+}
+
+.gif-keyboards {
+  position: fixed;
+  top: 26%;
+  left: 50%;
+  height: 74%;
+  width: 85%;
+  margin-left: -40%;
+  z-index: -1;
+  background-color: white;
+}
+
+.gif-cointainer {
+  height: 77%;
+  margin: 0 auto;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border: 2px solid black;
+  background: white;
+  border-radius: 1%;
+  width: 850px;
+  z-index: -1;
+}
+
+.gifBox {
+  float: left;
+  width: 20%;
+  margin: 0;
+  height: 36%;
+  text-align: center;
+  box-sizing: border-box;
+  z-index: -1;
+}
+
+.gifImg {
+  width: 120px;
+  height: 120px;
+  margin-left: 5px;
+}
+
+.letter-show {
+font-family: 'Open Sans';
+font-weight: 500;
+border-bottom: 1px solid black;
+border-right: 1px solid grey;
+}
+}
+
+@media only screen and (max-width: 1300px) {
+
+  .addLink {
+    font-size: 18px;
+    padding: 22px;
+    margin-top: -16%;
+    margin-left: 40%;
+    display: block;
+    max-width: 80px;
+  }
+
+  .typeGif {
+    font-size: 24px;
+    margin-left: 1px;
+    display: block;
+    margin-top: -5%;
+    margin-left: 56%;
+  }
+
+  .done {
+      font-size: 22px;
+      padding: 34px;
+      margin-top: -10%;
+      margin-left: 40%;
+      display: block;
+      max-width: 130px;
+  }
+
+  .again {
+    margin-top: -12%;
+    margin-left: 62%;
+    display: block;
+  }
 }
