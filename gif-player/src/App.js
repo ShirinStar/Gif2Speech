@@ -10,7 +10,6 @@ import GifList from './components/GifList';
 import Header from './components/Header';
 import Again from './components/Again';
 
-
 class App extends Component {
   constructor() {
     super();
