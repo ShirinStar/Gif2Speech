@@ -8,7 +8,7 @@ const TextToSpeech = (props) => {
       play
       text={word}
       />
-  )
-}
+    )
+  }
 
 export default TextToSpeech

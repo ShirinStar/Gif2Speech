@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import KeyHandler, { KEYPRESS } from 'react-key-handler';
 import { Route, Link } from 'react-router-dom';
 import './App.css';
-import { fetchGif, userSearch } from './services/giphy';
+import { userSearch } from './services/giphy';
 import TextToSpeech from './components/TextToSpeech';
 import SearchText from './components/SearchText';
 import GifList from './components/GifList';
@@ -22,7 +22,7 @@ class App extends Component {
   }
 
 //search gif by word
-async searchText(newGif){
+async searchText(newGif) {
     try {
       const gifResp = await userSearch(newGif);
       const keyboards = {
@@ -38,53 +38,44 @@ async searchText(newGif){
       };
     });
   }
-        catch(error){
+        catch(error) {
         console.log(error);
+    }
   }
-}
 
   handleSound(word) {
     this.setState(prevState => {
       return {
       playSounds: [...prevState.playSounds, word],
-
     };
   });
 }
 
-
-
   render() {
-    const { newGif, isShown } = this.state;
     return (
       <div className="App">
+        <div className='home'>
           <Header />
-      <div className='home'>
-        <div className='header'>
-          <h1>GIF to SPEECH</h1>
-          <h2 className='tagline'> playing verbally again </h2>
-        </div>
-        <div clssName='btnDiv'>
-          {this.state.keyboards.length===15 ? <p className='done'> Now just play and hit your keys! </p>:
-          <div className='btnWarp'>
-            <Link className='addLink' to="/search-text"> Add Gifs </Link>
-          <main className='search'>
-            <Route path="/search-text" render={() => (
+          <div className='btnDiv'>
+            {this.state.keyboards.length===15 ? <p className='done'> Now just play and hit your keys! </p>:
+            <div className='btnWarp'>
+            <Link className='addLink' to='/search-text'> Add Gifs </Link>
+            <main className='search'>
+            <Route path='/search-text' render={() => (
               <div>
-                <SearchText searchText={this.searchText}/>
+              <SearchText searchText={this.searchText}/>
               </div>
               )}
             />
           </main>
           </div>
-        }
+          }
+        </div>
       </div>
-
-    </div>
-        <GifList gifs={this.state.gifs} letters={this.state.letters} />
+      <GifList gifs={this.state.gifs} letters={this.state.letters} />
       {
-        this.state.letters.map((letter, i) => (
-          this.state.keyboards[i] && <KeyHandler
+      this.state.letters.map((letter, i) => (
+        this.state.keyboards[i] && <KeyHandler
             keyEventName='keydown'
             keyValue={letter}
             onKeyHandle={() => {
@@ -95,7 +86,6 @@ async searchText(newGif){
         {this.state.playSounds.map(sound => (
             <TextToSpeech word={sound}/>
         ))}
-
     </div>
     )
   }
