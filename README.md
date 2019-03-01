@@ -3,21 +3,34 @@
 ### Project description 
 An audio-visual instrument using Giphy and text to speech APIs.
 
-### wireframres
-![initial wireframes](https://i.imgur.com/40MRckk.png)
+![screenshots](https://i.imgur.com/XYaE5bH.png)(https://i.imgur.com/1RbLOC3.jpg)
 
-### Component Hierarchy
-![Hierarchy sketch](https://i.imgur.com/wiiLKik.jpg)
+### Goals
+I hope that throughout this project to gain a better understanding on the ins and out of react, mainly looked to explore- Form (user input), router, props, conditional functions, connections between two APIs and front-end skills. 
 
-### Major problems
-I hope that throughout this project to gain a better understanding on the ins and out of react, mainly looked to explore- Form (user input- add/delete options), router, props, conditional functions, connections between two APIs and front-end skills. 
+### Libraries and technologies in use:
+[React-Key Handler](https://www.npmjs.com/package/react-key-handler), [react-voice-components](https://github.com/grvcoelho/react-voice-components/), React-Router-Dom, Axios and Giphy API. 
 
-#### Open questions
-- how to type without 'play' at the same time?
-- t2s API?
-- they can choose to finish before filling all the 'squares'
-- how can I find ways to make it more fluid experience?
+### Code Snippet
 
+```
+  <Header />
+          <div className='btnDiv'>
+            {this.state.keyboards.length===15 ? <Again refreshPage={this.refreshPage}/> :
+            <div className='btnWarp'>
+            <Link className='addLink' to='/search-text'> Add Gifs </Link>
+            <main className='search'>
+            <Route path='/search-text' render={() => (
+              <div>
+              <SearchText searchText={this.searchText}/>
+              </div>
+              )}
+            />
+          </main>
+          </div>
+          }
+        </div>
+```
 
 ### Time frames
 Component | Priority | Estimated Time | Time Invetsted 
@@ -34,18 +47,20 @@ Delete Button | M | 1.5
 Debbuging collisions | H | 3
 Design | H | 13
 
-### text to speech API research:
-- [react-voice-components](https://github.com/grvcoelho/react-voice-components/) - I started with this one
-- [react-speech](https://github.com/andrewkeig/react-speech)
-- [IBM API](https://cloud.ibm.com/)
-- [Google Cloud](https://cloud.google.com/text-to-speech/docs/reference/rest/)
-- [web API speech](https://w3c.github.io/speech-api/#implementation-considerations)
+### wireframres
+![initial wireframes](https://i.imgur.com/40MRckk.png)
+
+### Component Hierarchy
+![Hierarchy sketch](https://i.imgur.com/wiiLKik.jpg)
 
 ### Giphy API documentation
 - [link](https://developers.giphy.com/docs/)
 
 ### post MVP
 maybe to add to lyrics API and play songs that way.. :)
+
+### acknowledgements
+This project was made possible thanks to Jason Karlin, David Whitlatch, Drake Talley and  Brian Flynn from General Assembley.
 
 
 
