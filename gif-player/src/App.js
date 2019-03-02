@@ -9,6 +9,7 @@ import SearchText from './components/SearchText';
 import GifList from './components/GifList';
 import Header from './components/Header';
 import Again from './components/Again';
+import Instructions from './components/Instructions';
 
 class App extends Component {
   constructor() {
@@ -22,6 +23,7 @@ class App extends Component {
     this.searchText = this.searchText.bind(this);
     this.handleSound = this.handleSound.bind(this);
     this.refreshPage = this.refreshPage.bind(this);
+    this.closeInstruction = this.closeInstruction.bind(this);
   }
 
 //search gif by word
@@ -54,7 +56,7 @@ async searchText(newGif) {
   });
 }
 
-  refreshPage(){
+  refreshPage() {
     this.setState(prevState => {
       return {
           gifs: [],
@@ -66,10 +68,22 @@ async searchText(newGif) {
     this.props.history.push('/')
   }
 
+  closeInstruction() {
+    this.props.history.push('/')
+  }
+
   render() {
     return (
       <div className="App">
         <div className='home'>
+            <Link className='instruction' to='/instruction'> Instructions </Link>
+            <Route path='/instruction' render={() => (
+              <div>
+              <Instructions closeInstruction={this.closeInstruction}/>
+              </div>
+              )}
+              />
+
           <Header />
           <div className='btnDiv'>
             {this.state.keyboards.length===15 ? <Again refreshPage={this.refreshPage}/> :

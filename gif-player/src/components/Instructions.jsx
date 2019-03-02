@@ -1,8 +1,11 @@
 import React from 'react';
 
-const Instructions = () => {
+const Instructions = (props) => {
   return(
-    <p> add gifs and press the mentioned keys to play</p>
+    <div>
+    <p className='instructionLine'> add gifs and press the mentioned keys to play</p>
+    <button className='close' onClick={props.closeInstruction}> X </button>
+    </div>
   )
 }
 

@@ -140,7 +140,46 @@ border-right: 1px solid grey;
   margin: auto 0;
   border-bottom: 1px dotted grey;
   padding-bottom: 5px;
-  padding-top: 10px;
+  padding-top: 5px;
+}
+
+.instruction {
+  margin: 0 auto;
+  display: block;
+  margin-left: 37%;
+  padding-bottom: 3px;
+  margin-top: 18px;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  text-decoration: none;
+}
+.instruction:hover {
+  color: #E62714;
+}
+
+.instructionLine{
+  margin: 0 auto;
+  display: block;
+  margin-left: 43%;
+  padding-bottom: 3px;
+  margin-top: -22px;
+  decoration: none;
+  font-family: 'Open Sans';
+  font-size: 14px;
+
+}
+
+.close {
+  margin: 0 auto;
+  display: block;
+  margin-left: 62%;
+  padding-bottom: 3px;
+  margin-top: -22px;
+  font-family: 'Open Sans';
+  font-size: 10px;
+  text-decoration: none;
+  border: 2px solid #1CD17F;
+  border-radius: 40%;
 }
 
 .gitLink{
