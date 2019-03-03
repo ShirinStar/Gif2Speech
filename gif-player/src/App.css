@@ -213,7 +213,6 @@ border-right: 1px solid grey;
 
 
 @media only screen and (max-width: 1550px) {
-
   h1{
     font-size: 80px;
   }
@@ -290,7 +289,6 @@ border-right: 1px solid grey;
 
 
 @media only screen and (max-width: 1500px) {
-
 h1{
   font-size: 70px;
 }
@@ -403,7 +401,6 @@ border-right: 1px solid grey;
 }
 
 @media only screen and (max-width: 1300px) {
-
   .addLink {
     font-size: 18px;
     padding: 22px;
@@ -440,7 +437,6 @@ border-right: 1px solid grey;
 
 
 @media only screen and (max-width: 1390px) {
-
   .tagline {
     font-size: 14px;
   }
@@ -448,7 +444,6 @@ border-right: 1px solid grey;
 }
 
 @media only screen and (max-width: 1350px) {
-
   h1{
     font-size: 50px;
   }
@@ -491,7 +486,6 @@ border-right: 1px solid grey;
 }
 
 @media only screen and (max-width: 1250px) {
-
   .addLink {
     font-size: 18px;
     padding: 22px;
@@ -523,4 +517,53 @@ border-right: 1px solid grey;
     margin-left: 62%;
     display: block;
   }
+}
+
+@media only screen and (max-width: 1050px) {
+  .instruction {
+    margin-left: 30%;
+    padding-bottom: 3px;
+    margin-top: 18px;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    text-decoration: none;
+  }
+
+  .instruction:hover {
+    color: #E62714;
+  }
+
+  .instructionLine{
+    margin: 0 auto;
+    display: block;
+    margin-left: 39%;
+    padding-bottom: 3px;
+    margin-top: -22px;
+    decoration: none;
+    font-family: 'Open Sans';
+    font-size: 14px;
+  }
+
+  .close {
+    margin: 0 auto;
+    display: block;
+    margin-left: 70%;
+    padding-bottom: 3px;
+    margin-top: -22px;
+    font-family: 'Open Sans';
+    font-size: 10px;
+    text-decoration: none;
+    border: 2px solid #1CD17F;
+    border-radius: 40%;
+    }
+
+    .gifBox {
+      float: left;
+      width: 20%;
+      margin: 0;
+      height: 35%;
+      text-align: center;
+      box-sizing: border-box;
+      z-index: -1;
+    }
 }
