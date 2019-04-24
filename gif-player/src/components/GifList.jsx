@@ -14,7 +14,8 @@ export default (props) => {
         <div className="letter-show"> {letters[counter]}
         </div>
       </div>
-  )})}
+    )})}
     </div>
-</div>
-)}
+ </div>
+ )
+}

@@ -10,7 +10,8 @@ export class SearchText extends Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
 
-    onChange = (e) => this.setState({
+    onChange = (e) =>
+    this.setState({
     [e.target.name]: e.target.value
   });
 
@@ -18,9 +19,11 @@ export class SearchText extends Component {
       e.preventDefault();
       const { value } = e.target;
       this.props.searchText(this.state.value);
-      this.setState({ value: '' })
+      this.setState({
+        value: ''
+      })
       this.props.history.push('/');
-  }
+    }
 
   render() {
     return(
@@ -40,4 +43,4 @@ export class SearchText extends Component {
   }
 }
 
-export default withRouter (SearchText)
+export default withRouter(SearchText)

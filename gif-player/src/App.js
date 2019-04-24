@@ -27,44 +27,44 @@ class App extends Component {
   }
 
 //search gif by word
-async searchText(newGif) {
-    try {
-      const gifResp = await userSearch(newGif);
-      const keyboards = {
-        word: newGif,
-        gif: gifResp
-      }
+ async searchText(newGif) {
+  try {
+    const gifResp = await userSearch(newGif);
+    const keyboards = {
+      word: newGif,
+      gif: gifResp
+       }
         this.setState(prevState => {
-          return {
-          gifs: [...prevState.gifs, gifResp],
-          currentGif: gifResp,
-          currentWord: newGif,
-          keyboards: [...prevState.keyboards, keyboards]
-      };
-    });
-  }
-        catch(error) {
-        console.log(error);
-    }
-  }
+         return {
+           gifs: [...prevState.gifs, gifResp],
+           currentGif: gifResp,
+           currentWord: newGif,
+           keyboards: [...prevState.keyboards, keyboards]
+         }
+       })
+      }
+       catch(error) {
+       console.log(error);
+     }
+   }
 
   handleSound(word) {
     this.setState(prevState => {
       return {
-      playSounds: [...prevState.playSounds, word],
-    };
-  });
-}
+      playSounds: [...prevState.playSounds, word]
+      }
+    })
+  }
 
   refreshPage() {
     this.setState(prevState => {
       return {
-          gifs: [],
-          keyboards: [],
-          playSounds: [],
-          letters:['q','w','e','r','t','a','s','d','f','g','z','x','c','v','b']
-  };
-});
+        gifs: [],
+        keyboards: [],
+        playSounds: [],
+        letters:['q','w','e','r','t','a','s','d','f','g','z','x','c','v','b']
+      }
+   })
     this.props.history.push('/')
   }
 
@@ -76,49 +76,47 @@ async searchText(newGif) {
     return (
       <div className="App">
         <div className='home'>
-            <Link className='instruction' to='/instruction'> Instructions </Link>
-            <Route path='/instruction' render={() => (
-              <div>
-              <Instructions closeInstruction={this.closeInstruction}/>
-              </div>
-              )}
-              />
+          <Link className='instruction' to='/instruction'> Instructions </Link>
+          <Route path='/instruction' render={() => (
+            <div>
+             <Instructions closeInstruction={this.closeInstruction}/>
+            </div>
+             )} />
 
           <Header />
+
           <div className='btnDiv'>
-            {this.state.keyboards.length===15 ? <Again refreshPage={this.refreshPage}/> :
-            <div className='btnWarp'>
-            <Link className='addLink' to='/search-text'> Add Gifs </Link>
-            <main className='search'>
-            <Route path='/search-text' render={() => (
-              <div>
-              <SearchText searchText={this.searchText}/>
-              </div>
-              )}
-            />
-          </main>
-          </div>
-          }
+           {this.state.keyboards.length===15 ?
+           <Again refreshPage={this.refreshPage}/> :
+           <div className='btnWarp'>
+           <Link className='addLink' to='/search-text'> Add Gifs </Link>
+           <main className='search'>
+           <Route path='/search-text' render={() => (
+           <div>
+           <SearchText searchText={this.searchText}/>
+           </div>)} />
+           </main>
+          </div> }
         </div>
       </div>
+
       <GifList gifs={this.state.gifs} letters={this.state.letters} />
-      {
-      this.state.letters.map((letter, i) => (
-        this.state.keyboards[i] && <KeyHandler
-            keyEventName='keydown'
-            keyValue={letter}
-            onKeyHandle={() => {
-              this.handleSound(this.state.keyboards[i].word);
-            }}
-          />
+
+      {this.state.letters.map((letter, i) => (
+       this.state.keyboards[i] && <KeyHandler
+        keyEventName='keydown'
+        keyValue={letter}
+        onKeyHandle={() => {
+        this.handleSound(this.state.keyboards[i].word);
+         }} />
         ))}
+
         {this.state.playSounds.map(sound => (
-            <TextToSpeech word={sound}/>
+         <TextToSpeech word={sound}/>
         ))}
-
     </div>
-    )
-  }
-}
+     )
+   }
+ }
 
-export default withRouter (App);
+export default withRouter(App);
